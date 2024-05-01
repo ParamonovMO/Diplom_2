@@ -1,6 +1,6 @@
 # Дипломный проект. Задание 2: API
 
-Автотесты для сервиса  "Stellar Burger". Сайт: `https://stellarburgers.nomoreparties.site/` Его документация: `https://code.s3.yandex.net/qa-automation-engineer/python-full/diploma/api-documentation.pdf?etag=3403196b527ca03259bfd0cb41163a89`
+Автотесты для сервиса  "Stellar Burger".
 
 ## Файлы:
 - allure_results - каталог с отчетом о тестировании
