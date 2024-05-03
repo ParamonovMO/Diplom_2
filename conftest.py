@@ -1,7 +1,7 @@
 import pytest
 import requests
 
-from data.data import Person
+from helpers.helpers import Person
 from data.urls import URL, Endpoints
 
 

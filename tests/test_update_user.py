@@ -2,7 +2,7 @@ import pytest
 import requests
 import allure
 
-from data.data import Person
+from helpers.helpers import Person
 from data.status_code import StatusCode
 from data.urls import URL, Endpoints
 
