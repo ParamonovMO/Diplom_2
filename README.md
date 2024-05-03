@@ -9,9 +9,10 @@
 - tests/test_get_orders.py - файл с проверками получения заказов
 - tests/test_login.py - файл с проверками логина пользователя
 - tests/test_update_user.py - файл с проверками изменения данных пользователя
-- data/data.py - файл с методами генерации данных для регистрации
+- helpers/helpers.py - файл с методами генерации данных для регистрации
 - data/ingredients.py -  файл с данными ингредиентов
 - data/status_code.py - файл со статус-кодами ответов
+- data/text_response.py - файл с текстами ответов
 - data/urls - файл с URL сервиса и ручками
 - requirements.txt - файл с внешними зависимостями
 - conftest.py - файл с фикстурой
