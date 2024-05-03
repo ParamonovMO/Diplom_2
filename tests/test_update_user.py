@@ -2,6 +2,7 @@ import pytest
 import requests
 import allure
 
+from data.text_response import TextResponse
 from helpers.helpers import Person
 from data.status_code import StatusCode
 from data.urls import URL, Endpoints
@@ -40,5 +41,5 @@ class TestChangeUserData:
     def test_change_person_data_whithout_auth(self, data):
         response = requests.patch(URL.main_url + Endpoints.DATA_CHANGE, data=data)
         assert response.status_code == StatusCode.UNAUTHORIZED and (
-            response.json().get("message") == "You should be authorised"
+            response.json().get("message") == TextResponse.UNAUTHORIZED
             )

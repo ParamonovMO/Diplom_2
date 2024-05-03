@@ -3,6 +3,7 @@ import allure
 
 from data.ingredients import Ingredients
 from data.status_code import StatusCode
+from data.text_response import TextResponse
 from data.urls import URL, Endpoints
 
 
@@ -33,5 +34,5 @@ class TestCreateOrder:
     def test_get_order_whithout_auth(self):
         response_get_order = requests.get(URL.main_url + Endpoints.GET_ORDERS)
         assert response_get_order.status_code == StatusCode.UNAUTHORIZED and (
-            "You should be authorised" in response_get_order.text
+            TextResponse.UNAUTHORIZED in response_get_order.text
             )

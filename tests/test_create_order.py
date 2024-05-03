@@ -2,6 +2,7 @@ import requests
 import allure
 
 from data.ingredients import Ingredients
+from data.text_response import TextResponse
 from data.urls import URL, Endpoints
 from data.status_code import StatusCode
 
@@ -54,4 +55,4 @@ class TestCreateOrder:
         token = create_new_user[1].json()["accessToken"]
         headers = {'Authorization': token}
         response = requests.post(URL.main_url + Endpoints.CREATE_ORDER, headers=headers, data=Ingredients.incorrect_ingredients_data_hash)
-        assert response.status_code == StatusCode.INTERNAL_SERVER_ERROR and 'Internal Server Error' in response.text
+        assert response.status_code == StatusCode.INTERNAL_SERVER_ERROR and TextResponse.SERVER_ERROR in response.text

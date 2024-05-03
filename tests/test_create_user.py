@@ -2,6 +2,7 @@ import pytest
 import allure
 import requests
 
+from data.text_response import TextResponse
 from helpers.helpers import Person
 from data.status_code import StatusCode
 from data.urls import URL, Endpoints
@@ -32,7 +33,7 @@ class TestCreateUser:
         payload = response[0]
         response_double_register = requests.post(URL.main_url + Endpoints.CREATE_USER, data=payload)
         assert response_double_register.status_code == StatusCode.FORBIDDEN and (
-            response_double_register.json().get("message") == "User already exists"
+            response_double_register.json().get("message") == TextResponse.CREATE_DOUBLE_USER
             )
 
     @allure.title('Проверка создания некорректного пользователя')
